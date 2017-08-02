@@ -103,7 +103,8 @@ class QueryType(graphene.ObjectType):
 
     transactions = graphene.Field(
         graphene.List(TransactionType),
-        asset_id=graphene.String()
+        asset_id=graphene.String(),
+        operation=graphene.String()
     )
 
     def resolve_transaction(self, args, context, info):
@@ -115,7 +116,9 @@ class QueryType(graphene.ObjectType):
     def resolve_transactions(self, args, context, info):
         bdb = BigchainDB()
         asset_id = args.get('asset_id')
-        retrieved_txs = bdb.transactions.get(asset_id=asset_id)
+        operation = args.get('operation', None)
+        retrieved_txs = bdb.transactions.get(asset_id=asset_id,
+                                             operation=operation)
         return [TransactionType.from_json(tx) for tx in retrieved_txs]
 
 
