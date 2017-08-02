@@ -43,6 +43,9 @@ This are the transactions used in the next examples.
 
 ## Examples
 
+After prepopulating BigchainDB with the transactions provided you can copy past
+these queries into the GraphQL IDE.
+
 - Query a transaction:
 ```graphql
 query {
