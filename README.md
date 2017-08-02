@@ -44,7 +44,7 @@ This are the transactions used in the next examples.
 ## Examples
 
 - Query a transaction:
-```javascript
+```graphql
 query {
     transaction(id:"3b3fd7128580280052595b9bcda98895a851793cba77402ca4de0963be958c9e") {
         id
@@ -67,7 +67,7 @@ query {
 ```
 
 - Query multiple transactions by asset id:
-```javascript
+```graphql
 query {
     transactions(assetId:"3b3fd7128580280052595b9bcda98895a851793cba77402ca4de0963be958c9e") {
         # For each transaction returned I only want the id, operation and
@@ -82,7 +82,7 @@ query {
 ```
 
 - Query only transfer transactions with asset id:
-```javascript
+```graphql
 query {
     transactions(assetId:"3b3fd7128580280052595b9bcda98895a851793cba77402ca4de0963be958c9e", operation:"TRANSFER") {
         # I only want the public keys and amounts of all the outputs that this
@@ -106,7 +106,7 @@ query {
 ```
 
 - Query the outputs endpoint by public key
-```javascript
+```graphql
 query {
     outputs(publicKey:"FxEfUt9ArymGeCB99dZtfCUcsKwC29c8AHZ9EPnVWcyL") {
         outputIndex
