@@ -1,0 +1,35 @@
+{
+  "inputs": [
+    {
+      "owners_before": [
+        "FxEfUt9ArymGeCB99dZtfCUcsKwC29c8AHZ9EPnVWcyL"
+      ],
+      "fulfills": null,
+      "fulfillment": "pGSAIN4qAsNI5BTBBPG_-rku7U1_3LP3OQCOxJwYNVeYFDwXgUC3hdNfDiyrDRy-qyq0o8Nqw8SQWzfethbxvfvHanbKR6jS4dD4tBXJsAqebR08DbqJ7Eig0VgsuMVXHs2FIQcE"
+    }
+  ],
+  "outputs": [
+    {
+      "public_keys": [
+        "FxEfUt9ArymGeCB99dZtfCUcsKwC29c8AHZ9EPnVWcyL"
+      ],
+      "condition": {
+        "details": {
+          "type": "ed25519-sha-256",
+          "public_key": "FxEfUt9ArymGeCB99dZtfCUcsKwC29c8AHZ9EPnVWcyL"
+        },
+        "uri": "ni:///sha-256;BX6oMTzQB_2xyFRExF1-w5ZwfuiWVzIfJAzVWyn7dCQ?fpt=ed25519-sha-256&cost=131072"
+      },
+      "amount": "1"
+    }
+  ],
+  "operation": "CREATE",
+  "metadata": null,
+  "asset": {
+    "data": {
+      "a": "b"
+    }
+  },
+  "version": "1.0",
+  "id": "3b3fd7128580280052595b9bcda98895a851793cba77402ca4de0963be958c9e"
+}
