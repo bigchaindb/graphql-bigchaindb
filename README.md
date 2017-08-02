@@ -9,14 +9,14 @@ objects from the returned json.
 It also provides a Flask app that provides an in browser IDE from exploring
 GraphQL.
 
-#### Note
+### Note
 
 The BigchainDB driver tries to connect to BigchainDB server running on
 `localhost:9984`. It you want to change this you need to edit `prepopulate.py`
 and `schema.py` and pass the correct parameters to the initialization of the
 BigchainDB python driver.
 
-#### Setup
+### Setup
 
 1. Install the requirements:
 ```bash
