@@ -59,11 +59,22 @@ class QueryType(graphene.ObjectType):
         id=graphene.String()
     )
 
+    transactions = graphene.Field(
+        graphene.List(TransactionType),
+        asset_id=graphene.String()
+    )
+
     def resolve_transaction(self, args, context, info):
         bdb = BigchainDB()
         txid = args.get('id')
         retrieved_tx = bdb.transactions.retrieve(txid)
         return TransactionType.from_retrieved_tx(retrieved_tx)
+
+    def resolve_transactions(self, args, context, info):
+        bdb = BigchainDB()
+        asset_id = args.get('asset_id')
+        retrieved_txs = bdb.transactions.get(asset_id=asset_id)
+        return [TransactionType.from_retrieved_tx(tx) for tx in retrieved_txs]
 
 
 schema = graphene.Schema(
